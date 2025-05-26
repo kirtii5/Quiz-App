@@ -48,7 +48,7 @@ export default function Home() {
             className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
             onClick={() => {
               if (!user) {
-                alert("You need to login to start a quiz.");
+                alert("You need to login as student to start a quiz.");
                 navigate("/login");
               } else if (user.role !== "student") {
                 alert("Only students can access the quiz.");
@@ -70,7 +70,7 @@ export default function Home() {
             className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition"
             onClick={() => {
               if (!user) {
-                alert("You need to login to create a quiz.");
+                alert("You need to login as admin to create a quiz.");
                 navigate("/login");
               } else if (user.role !== "admin") {
                 alert("Only admins can create quizzes.");
